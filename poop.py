@@ -9,26 +9,11 @@ tweeted_file = os.path.join(__location__, "tweeted_users.txt")
 
 data = {'like':
             {'queries': ['"poop"'],
-             'responses': ['I like you.',
-                           'You\'re valued.',
-                           'You matter.',
-                           u'\u2764']
+             'responses': [u'\E4F5']
             }
         }
 
-filters = ['http',
-           '#nowplaying',
-           'youtube',
-           '-',
-           '"',
-           u'“',
-           u'”',
-           'poor boy',
-           'the way you do',
-           'hear it every day',
-           'that\'s ok',
-           'thats ok'
-           'nobody loves me better']
+filters = ['']
 
 
 def get_tweet(api_, type_):
@@ -46,7 +31,7 @@ def get_users():
 
 
 def filter_tweets(tweets_, users_):
-    """Filter out tweets to avoid things like song lyrics, etc."""
+    """Filter out tweets... etc."""
     while True:
         tweet_ = tweets_.pop(0)
         text = tweet_.text
